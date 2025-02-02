@@ -37,3 +37,9 @@ If your host has an IP like ```192.168.1.x``` and your Talos node has ```10.0.2.
 ```
 Get-NetIPConfiguration
 ```
+
+Under the ```Network``` tab of VirtualBox, I changed the network mode to attach to ```Bridged Adapters``` instead of ```NAT``` <br/>
+NAT stands for network address translation. It's a way to map multiple private addresses inside a local network to a public IP address.
+<br/><br/>
+![bridged mode](https://github.com/user-attachments/assets/bf1e7238-21a7-47e9-afa8-df3ac2b59a4f)
+
