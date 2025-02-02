@@ -60,12 +60,26 @@ The Talos Host IP address is now updated in the dashboard:
 
 Set the APIServer via a config file for ```kubecfonfig```:
 ```
-export TALOSCONFIG="talosconfig"
+$env:TALOSCONFIG = "talosconfig"
 ```
+
+```
+echo $env:TALOSCONFIG
+```
+
+![talosconfig](https://github.com/user-attachments/assets/ceecf6ae-055e-41a6-a324-d6a099e4bdf1)
+
 
 ```
 ./talosctl config endpoint 192.168.0.72
 ```
+
+The hostname disappeared after a reboot cycle
+
+![host-gone](https://github.com/user-attachments/assets/cda5f52d-1fd0-403b-9a35-51bd9129f6c5)
+
+
+
 
 
 
