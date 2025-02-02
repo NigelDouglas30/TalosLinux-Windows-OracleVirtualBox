@@ -53,7 +53,7 @@ The Talos Host IP address is now updated in the dashboard:
 ![reflection](https://github.com/user-attachments/assets/e0b0f4a1-ad84-430e-968e-761547b2e4d0)
 
 <br/><br/>
-```OPTIONAL```: You can bootstrap the worker nodes if you have a second VM available
+```OPTIONAL```: You can tie the worker nodes if you have a second VM available
 ```
 ./talosctl apply-config --insecure --nodes <worker-node-IP> --file worker.yaml
 ```
@@ -108,13 +108,13 @@ $env:TALOSCONFIG = "talosconfig"
 echo $env:TALOSCONFIG
 ```
 ```
+./talosctl config endpoint 192.168.0.73
+```
+```
 ./talosctl config node 192.168.0.73
 ```
 ```
 ./talosctl bootstrap
-```
-```
-./talosctl bootstrap --talosconfig TALOSCONFIG --nodes 192.168.0.73
 ```
 Pull Down the Kubeconfig locally
 ```
