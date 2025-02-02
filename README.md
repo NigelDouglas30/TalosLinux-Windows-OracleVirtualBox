@@ -96,10 +96,10 @@ The x509: certificate signed by unknown authority error means that Talosctl cann
 ## Starting again from scratch by generating cluster with the correct host IP
 
 ```
-./talosctl gen config nigel-talos-cluster https://192.168.0.72:6443
+./talosctl gen config nigel-talos-cluster https://192.168.0.73:6443
 ```
 ```
-./talosctl apply-config --insecure --nodes 192.168.0.72 --file controlplane.yaml
+./talosctl apply-config --insecure --nodes 192.168.0.73 --file controlplane.yaml
 ```
 ```
 $env:TALOSCONFIG = "talosconfig"
@@ -108,13 +108,13 @@ $env:TALOSCONFIG = "talosconfig"
 echo $env:TALOSCONFIG
 ```
 ```
-./talosctl config node 192.168.0.72
+./talosctl config node 192.168.0.73
 ```
 ```
 ./talosctl bootstrap
 ```
 ```
-./talosctl bootstrap --talosconfig TALOSCONFIG --nodes 192.168.0.72
+./talosctl bootstrap --talosconfig TALOSCONFIG --nodes 192.168.0.73
 ```
 Pull Down the Kubeconfig locally
 ```
