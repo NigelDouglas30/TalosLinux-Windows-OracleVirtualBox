@@ -121,5 +121,18 @@ Pull Down the Kubeconfig locally
 ./talosctl kubeconfig .
 ```
 
+![network-again](https://github.com/user-attachments/assets/e4684458-b8f6-4b45-a400-092cec36ea53)
+
+This error means that your Talos node (192.168.0.73) is refusing the connection on port 50000. The key part is:
+<br/><br/>
+```"No connection could be made because the target machine actively refused it."```
+<br/><br/>
+This suggests that nothing is listening on port 50000, meaning:
+1. Talos isn’t running on 192.168.0.73 (which we know is the case from the Talos Dashboard)
+2. The node crashed or rebooted incorrectly
+3. A firewall is blocking the connection (this was disabled)
+4. The wrong IP address is being used (I should only have 1 VM with 1 IP address)
+
+
 
 
