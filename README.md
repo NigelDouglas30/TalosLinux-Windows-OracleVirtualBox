@@ -47,6 +47,12 @@ Just like that, I was able to apply the file without any issues since we can rea
 ![network-fixed](https://github.com/user-attachments/assets/cf53f31e-dee4-4465-a045-b8ca9a2d52dc)
 
 
+The Talos Host IP address is now updated in the dashboard:
+
+![reflection](https://github.com/user-attachments/assets/e0b0f4a1-ad84-430e-968e-761547b2e4d0)
+
+
+
 
 
 
