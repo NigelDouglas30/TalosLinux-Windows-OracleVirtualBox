@@ -42,7 +42,8 @@ NAT stands for network address translation. It's a way to map multiple private a
 <br/><br/>
 ![bridged mode](https://github.com/user-attachments/assets/bf1e7238-21a7-47e9-afa8-df3ac2b59a4f)
 
-Just like that, I was able to apply the file without any issues since we can reach the controlplane IP:
+Just like that, I was able to apply the file without any issues since we can reach the controlplane IP. <br/>
+We can see the new controlplane IP address ```192.168.0.72``` in the Talos Dashboard:
 
 ![network-fixed](https://github.com/user-attachments/assets/cf53f31e-dee4-4465-a045-b8ca9a2d52dc)
 
