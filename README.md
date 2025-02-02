@@ -6,10 +6,12 @@ I can then store the ISO on my Windows Desktop:<br/><br/>
 ```C:\Users\nigel\OneDrive\Desktop\metal-amd64.iso```
 
 ## Setting up Oracle VirtualBox
-I start by loading the Talos Linux ```metal-amd64``` ISO into <b>Oracle VM VirtualBox</b><br/><br/>
+I start by loading the Talos Linux ```metal-amd64``` ISO into <b>Oracle VM VirtualBox</b>
+<br/><br/>
 ![oracle-setup](https://github.com/user-attachments/assets/408716d6-ee92-4ab5-8f10-8e41716e1650)
 <br/><br/>
 This processes only takes a few seconds to complete
+<br/><br/>
 ![talos-oracle](https://github.com/user-attachments/assets/6b247cb5-555e-4659-8988-abb185d63124)
 
 ## Creating the cluster
@@ -17,7 +19,21 @@ Generate a configuration fiile for the new new Kubernetes cluster using the abov
 ```
 ./talosctl gen config nigel-talos-cluster https://10.0.2.15:6443
 ```
-
+<br/><br/>
 ![configs](https://github.com/user-attachments/assets/7e05c959-fa39-4c48-b769-9fdf09177782)
+<br/><br/>
+
+At the moment I'm running into some connectivity issues with the assigned IP ```10.0.2.15``` <br/>
+I tried pinging the IP address but no packets are received for ```ping 10.0.2.15```
+```
+./talosctl apply-config --insecure --nodes 10.0.2.15 --file controlplane.yaml
+```
+
+![connection-issue](https://github.com/user-attachments/assets/77eb3c6a-378a-4f68-966e-c06fa72e57fc)
 
 
+If your host has an IP like ```192.168.1.x``` and your Talos node has ```10.0.2.x```, they might be on <b>different subnets</b>, requiring routing.
+
+```
+Get-NetIPConfiguration
+```
