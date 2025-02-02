@@ -87,7 +87,39 @@ Everything looks to be done correctly, but I'm struggling to ```BOOTSTRAP``` my 
 ![bootstrap](https://github.com/user-attachments/assets/4af9abcd-2d5c-4943-81be-6097a638bfdb)
 
 
+The x509: certificate signed by unknown authority error means that Talosctl cannot verify the node’s certificate. This is usually due to:
 
+1. Incorrect or missing talosconfig file
+2. Talos node was reset/reinstalled, making the existing certificate invalid
+3. The wrong node IP is being used
+
+## Starting again from scratch by generating cluster with the correct host IP
+
+```
+./talosctl gen config nigel-talos-cluster https://192.168.0.72:6443
+```
+```
+./talosctl apply-config --insecure --nodes 192.168.0.72 --file controlplane.yaml
+```
+```
+$env:TALOSCONFIG = "talosconfig"
+```
+```
+echo $env:TALOSCONFIG
+```
+```
+./talosctl config node 192.168.0.72
+```
+```
+./talosctl bootstrap
+```
+```
+./talosctl bootstrap --talosconfig TALOSCONFIG --nodes 192.168.0.72
+```
+Pull Down the Kubeconfig locally
+```
+./talosctl kubeconfig .
+```
 
 
 
