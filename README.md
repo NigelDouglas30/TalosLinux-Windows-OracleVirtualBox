@@ -19,7 +19,6 @@ Generate a configuration fiile for the new new Kubernetes cluster using the abov
 ```
 ./talosctl gen config nigel-talos-cluster https://10.0.2.15:6443
 ```
-<br/><br/>
 ![configs](https://github.com/user-attachments/assets/7e05c959-fa39-4c48-b769-9fdf09177782)
 <br/><br/>
 
@@ -42,4 +41,12 @@ Under the ```Network``` tab of VirtualBox, I changed the network mode to attach 
 NAT stands for network address translation. It's a way to map multiple private addresses inside a local network to a public IP address.
 <br/><br/>
 ![bridged mode](https://github.com/user-attachments/assets/bf1e7238-21a7-47e9-afa8-df3ac2b59a4f)
+
+Just like that, I was able to apply the file without any issues since we can reach the controlplane IP:
+
+![network-fixed](https://github.com/user-attachments/assets/cf53f31e-dee4-4465-a045-b8ca9a2d52dc)
+
+
+
+
 
