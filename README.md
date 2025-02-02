@@ -31,7 +31,7 @@ I tried pinging the IP address but no packets are received for ```ping 10.0.2.15
 ![connection-issue](https://github.com/user-attachments/assets/77eb3c6a-378a-4f68-966e-c06fa72e57fc)
 
 
-If your host has an IP like ```192.168.1.x``` and your Talos node has ```10.0.2.x```, they might be on <b>different subnets</b>, requiring routing.
+If your host has an IP like ```192.168.0.x``` and your Talos node has ```10.0.2.x```, they might be on <b>different subnets</b>, requiring routing.
 
 ```
 Get-NetIPConfiguration
@@ -51,7 +51,20 @@ The Talos Host IP address is now updated in the dashboard:
 
 ![reflection](https://github.com/user-attachments/assets/e0b0f4a1-ad84-430e-968e-761547b2e4d0)
 
+<br/><br/>
+```OPTIONAL```: You can bootstrap the worker nodes if you have a second VM available
+```
+./talosctl apply-config --insecure --nodes <worker-node-IP> --file worker.yaml
+```
 
+Set the APIServer via a config file for ```kubecfonfig```:
+```
+export TALOSCONFIG="talosconfig"
+```
+
+```
+./talosctl config endpoint 192.168.0.72
+```
 
 
 
