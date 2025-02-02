@@ -78,6 +78,13 @@ The hostname disappeared after a reboot cycle
 
 ![host-gone](https://github.com/user-attachments/assets/cda5f52d-1fd0-403b-9a35-51bd9129f6c5)
 
+Everything looks to be done correctly, but I'm struggling to ```BOOTSTRAP``` my clusters:
+```
+./talosctl bootstrap --talosconfig TALOSCONFIG --nodes 192.168.0.72
+```
+```error executing bootstrap: rpc error: code = Unavailable desc = connection error: desc = "transport: authentication handshake failed: x509: certificate signed by unknown authority"```
+
+![bootstrap](https://github.com/user-attachments/assets/4af9abcd-2d5c-4943-81be-6097a638bfdb)
 
 
 
