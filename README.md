@@ -149,6 +149,10 @@ Test-NetConnection 192.168.0.73 -Port 50000
 ![outdated](https://github.com/user-attachments/assets/ca526b25-590f-4058-925c-dccd260d6dab)
 <br/><br/>
 
+Behaviour is inconsistent. Sometimes I am unable to reach the endpoint and sometimes I can:
+![state](https://github.com/user-attachments/assets/b7af331a-7110-4193-b339-804225f09e6e)
+<br/><br/>
+
 
 If I can get around the networking issue, I should be able to complete the prcess below
 
