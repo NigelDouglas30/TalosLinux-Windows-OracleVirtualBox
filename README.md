@@ -141,6 +141,14 @@ Test-NetConnection 192.168.0.73 -Port 50000
 ![connection](https://github.com/user-attachments/assets/66af2f28-b9e8-4bab-977e-93bd747420f4)
 <br/><br/>
 
+```
+./talosctl config info
+./talosctl version
+```
+
+![outdated](https://github.com/user-attachments/assets/ca526b25-590f-4058-925c-dccd260d6dab)
+<br/><br/>
+
 
 If I can get around the networking issue, I should be able to complete the prcess below
 
