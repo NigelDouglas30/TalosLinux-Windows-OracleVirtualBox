@@ -133,6 +133,11 @@ This suggests that nothing is listening on port 50000, meaning:
 3. A firewall is blocking the connection (this was disabled)
 4. The wrong IP address is being used (I should only have 1 VM with 1 IP address)
 
+If I can get around the networking issue, I should be able to complete the prcess below
 
-
+```
+talosctl bootstrap -n 192.168.0.73 -e 192.168.0.73 --talosconfig ./talosconfig
+talosctl kubeconfig -n 192.168.0.73 -e 192.168.0.73 --talosconfig ./talosconfig --merge=false
+kubectl --kubeconfig kubeconfig get nodes
+```
 
