@@ -133,6 +133,15 @@ This suggests that nothing is listening on port 50000, meaning:
 3. A firewall is blocking the connection (this was disabled)
 4. The wrong IP address is being used (I should only have 1 VM with 1 IP address)
 
+### Testing Port Connectivity
+```
+Test-NetConnection 192.168.0.73 -Port 50000
+```
+
+![connection](https://github.com/user-attachments/assets/66af2f28-b9e8-4bab-977e-93bd747420f4)
+<br/><br/>
+
+
 If I can get around the networking issue, I should be able to complete the prcess below
 
 ```
